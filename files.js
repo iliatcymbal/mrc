@@ -7,7 +7,7 @@ module.exports = [
     ext: 'scss'
   },
   {
-    ext: 'ts',
+    ext: 'js',
     type: 'component'
   }
 ];

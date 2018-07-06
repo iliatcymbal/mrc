@@ -15,10 +15,10 @@ const initialName = helpers.getInitialName({ mainName, prefix, postfix });
 create.createDir(initialName, (path) => {
   files.forEach((file) => {
     const baseName = `${file.name || mainName}`;
-    const name = file.name !== 'index' ?
-      helpers.getFullName({ name: baseName, postfix, prefix, div }) : 'index';
-    const commonName = helpers.getFullName({ name: mainName, postfix, prefix, div });
     const ext = file.ext || 'js';
+    const name = file.name !== 'index' ?
+      helpers.getFullName({ name: baseName, postfix, prefix, div, ext }) : 'index';
+    const commonName = helpers.getFullName({ name: mainName, postfix, prefix, div });
 
     Object.assign(file, { postfix, prefix, name });
 

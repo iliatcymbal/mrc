@@ -12,7 +12,7 @@ Install package globally to run it directly from terminal `npm i mrc -g`
 
 ## Usage
 
-Run `ngms` to create folder named "NewComponent" with default structure:
+Run `mrc` to create folder named "NewComponent" with default structure:
 
 * NewComponent 
     * index.js
