@@ -1,4 +1,4 @@
-# ngms
+# mrec
 
 This module helps to create default angular components from terminal.
 
@@ -8,7 +8,7 @@ npm ^3.5
 
 ## Installation
 
-Install package globally to run it directly from terminal `npm i mrc -g`
+Install package globally to run it directly from terminal `npm i mrec -g`
 
 ## Usage
 
@@ -27,7 +27,7 @@ You can change default component name by defining additional parameters.
 Define the name of created component (by default set to "Component").
  
  ```
- ngms --name=Main
+ mrec --name=Main
  ```
  
  Will generate the following:
@@ -42,7 +42,7 @@ Define the name of created component (by default set to "Component").
  Allows to set text prefix to the name of your component (by default is empty);
  
   ```
-  ngms --prf=Main
+  mrec --prf=Main
   ```
   
   Will generate the following:
@@ -56,7 +56,7 @@ Define the name of created component (by default set to "Component").
  Allows to set text postfix to the name of your component (by default is empty);
  
   ```
-  ngms --postfix=post
+  mrec --postfix=post
   ```
   
   Will generate the following:
@@ -70,7 +70,7 @@ Define the name of created component (by default set to "Component").
  Set delimiter to separate component name from postfix/prefix (by default is ".");
  
   ```
-  ngms --prf=main --name=component --div=-
+  mrec --prf=main --name=component --div=-
   ```
   
   Will generate the following:

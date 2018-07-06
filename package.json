@@ -1,7 +1,7 @@
 {
-  "name": "mrc",
+  "name": "mrec",
   "version": "1.0.0",
-  "description": "simple create react components",
+  "description": "simply make react components",
   "main": "index.js",
   "dependencies": {
     "fs-extra": "^2.1.2",
