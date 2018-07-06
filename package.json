@@ -1,0 +1,26 @@
+{
+  "name": "mrc",
+  "version": "1.0.0",
+  "description": "simple create react components",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^2.1.2",
+    "yargs": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliatcymbal/mrc.git"
+  },
+  "author": "iliatcymbal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iliatcymbal/mrc/issues"
+  },
+  "homepage": "https://github.com/iliatcymbal/mrc#readme",
+  "bin": "./index.js"
+}
