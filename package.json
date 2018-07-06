@@ -1,6 +1,6 @@
 {
   "name": "mrec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simply make react components",
   "main": "index.js",
   "dependencies": {
@@ -22,5 +22,11 @@
     "url": "https://github.com/iliatcymbal/mrc/issues"
   },
   "homepage": "https://github.com/iliatcymbal/mrc#readme",
-  "bin": "./index.js"
+  "bin": "./index.js",
+  "keywords": [
+    "react",
+    "create react component",
+    "react template",
+    "react from console"
+  ]
 }

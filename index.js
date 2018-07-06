@@ -14,7 +14,8 @@ const initialName = helpers.getInitialName({ mainName, prefix, postfix });
 
 create.createDir(initialName, (path) => {
   files.forEach((file) => {
-    const baseName = `${file.name || mainName}`;
+    const title = file.name || mainName;
+    const baseName = (file.ext || '').includes('css') ? helpers.firstToLowerCase(title) : title;
     const ext = file.ext || 'js';
     const name = file.name !== 'index' ?
       helpers.getFullName({ name: baseName, postfix, prefix, div, ext }) : 'index';
