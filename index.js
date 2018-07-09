@@ -6,11 +6,13 @@ const files = require('./files');
 const body = require('./createBody');
 const helpers = require('./lib/helpers');
 
-const mainName = argv['name'] || 'NewComponent';
+const [firstArg] = argv._;
+const mainName = argv['name'] || firstArg || 'NewComponent';
 const prefix = argv['prf'];
 const postfix = argv['postfix'];
 const div = argv['div'];
 const initialName = helpers.getInitialName({ mainName, prefix, postfix });
+
 
 create.createDir(initialName, (path) => {
   files.forEach((file) => {
