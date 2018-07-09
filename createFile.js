@@ -1,4 +1,5 @@
-const fs = require('fs-extra');
+const fs = require('fs');
+const removeDir = require('./lib/removeDir');
 
 const createFile = (name = 'index.js', body = '') => {
   fs.writeFile(name, body, (err) => {
@@ -7,18 +8,26 @@ const createFile = (name = 'index.js', body = '') => {
   });
 };
 
-const createDir = (name = 'Main', callback) => {
-  fs.ensureDir(name, (err) => {
-
-    if (err) throw err;
+const mkdir = (name) => new Promise((resolve, reject) => {
+  fs.mkdir(name, (err) => {
+    if (err) {
+      reject(err);
+    }
 
     console.log(`The dir "${name}" was created`);
 
-    if (callback) {
-      callback(name);
-    }
+    resolve(name);
   });
+});
 
-};
+const createDir = (name = 'Main') => mkdir(name)
+  .catch((error) => {
+    if (error.code === 'EEXIST') {
+      return removeDir(name)
+        .then(createDir);
+    }
+
+    throw error;
+  });
 
 module.exports = { createFile, createDir };

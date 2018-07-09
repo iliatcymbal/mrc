@@ -14,20 +14,21 @@ const div = argv['div'];
 const initialName = helpers.getInitialName({ mainName, prefix, postfix });
 
 
-create.createDir(initialName, (path) => {
-  files.forEach((file) => {
-    const title = file.name || mainName;
-    const baseName = (file.ext || '').includes('css') ? helpers.firstToLowerCase(title) : title;
-    const ext = file.ext || 'js';
-    const name = file.name !== 'index' ?
-      helpers.getFullName({ name: baseName, postfix, prefix, div, ext }) : 'index';
-    const commonName = helpers.getFullName({ name: mainName, postfix, prefix, div });
+create.createDir(initialName)
+  .then((path) => {
+    files.forEach((file) => {
+      const title = file.name || mainName;
+      const baseName = (file.ext || '').includes('css') ? helpers.firstToLowerCase(title) : title;
+      const ext = file.ext || 'js';
+      const name = file.name !== 'index' ?
+        helpers.getFullName({ name: baseName, postfix, prefix, div, ext }) : 'index';
+      const commonName = helpers.getFullName({ name: mainName, postfix, prefix, div });
 
-    Object.assign(file, { postfix, prefix, name });
+      Object.assign(file, { postfix, prefix, name });
 
-    create.createFile(`${path}/${name}.${ext}`, body(file, path, commonName));
+      create.createFile(`${path}/${name}.${ext}`, body(file, path, commonName));
+    });
   });
-});
 
 module.exports = create.createDir;
 
