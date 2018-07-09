@@ -1,6 +1,6 @@
 # mrec
 
-This module helps to create default angular components from terminal.
+This module helps to create default react components from terminal.
 
 ## Requirements
 Node ^7.0
