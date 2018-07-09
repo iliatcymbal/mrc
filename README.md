@@ -8,8 +8,8 @@ npm ^3.5
 
 ## Installation
 
-Install package globally to run it directly from terminal `npm i mrec -g`
-Install it locally `npm i -D mrec` and use _npx_ (npm 5.2+) `npx mrec`
+Install package globally to run it directly from terminal `npm i mrec -g`  
+Or install it locally `npm i -D mrec` and use _npx_ (npm 5.2+) `npx mrec`
 
 ## Usage
 
@@ -25,7 +25,7 @@ Run `mrc` to create folder named "NewComponent" with default structure:
 You can change default component name by defining additional parameters.
 
 ### name
-Define the name of created component (by default set to "Component").
+Define the name of created component (by default set to "Component").  
 The second option it is just set name without any arguments `mrec Main`
  
  ```
