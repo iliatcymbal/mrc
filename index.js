@@ -10,10 +10,11 @@ const [firstArg] = argv._;
 const mainName = argv['name'] || firstArg || 'NewComponent';
 const prefix = argv['prf'];
 const postfix = argv['postfix'];
+const pure = argv['pure'];
 const div = argv['div'];
 const initialName = helpers.getInitialName({ mainName, prefix, postfix });
 
-
+console.log(argv);
 create.createDir(initialName)
   .then((path) => {
     files.forEach((file) => {
@@ -26,7 +27,7 @@ create.createDir(initialName)
 
       Object.assign(file, { postfix, prefix, name });
 
-      create.createFile(`${path}/${name}.${ext}`, body(file, path, commonName));
+      create.createFile(`${path}/${name}.${ext}`, body(file, path, commonName, pure));
     });
   });
 

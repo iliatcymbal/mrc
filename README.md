@@ -44,6 +44,13 @@ The second option it is just set name without any arguments `mrec Main`
     * main.scss
 
 
+### Class and Pure Components
+ By default tool creates class (stateful) component. If you want to create pure component use _--pure_ parameter.  
+  
+ ```
+ mrec --pure
+ ```
+
 ### prf
  Allows to set text prefix to the name of your component (by default it is empty);
  

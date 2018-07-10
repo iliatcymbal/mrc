@@ -3,13 +3,13 @@ const style = require('./types/style');
 const html = require('./types/html');
 const main = require('./types/main');
 
-module.exports = (file, path, name) => {
+module.exports = (file, path, name, isPure) => {
   if (file.name === 'index') {
     return main(name);
   }
 
   if (file.ext === 'js' && file.type === 'component') {
-    return component(file.name, path);
+    return component(file.name, path, isPure);
   }
 
   if (/less|sass|css/.test(file.ext)) {
