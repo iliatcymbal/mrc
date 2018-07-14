@@ -1,7 +1,7 @@
-const helpers = require('./../lib/helpers');
+const { vengerToCamelCase, firstToLowerCase } = require('./../lib/helpers');
 
 const classComponent = (name) => `import { Component } from 'react';
-import './${name.toLowerCase()}.scss';
+import './${firstToLowerCase(name)}.scss';
   
 export class ${name} extends Component {
   state = {}
@@ -18,7 +18,7 @@ export class ${name} extends Component {
 }`;
 
 const pureComponent = (name) => `import { Component } from 'react';
-import './${name.toLowerCase()}.scss';
+import './${firstToLowerCase(name)}.scss';
   
 export const ${name} = (props) => {
   return (
@@ -27,7 +27,7 @@ export const ${name} = (props) => {
 };`;
 
 module.exports = (name, path, isPure) => {
-  const componentClassName = helpers.vengerToCamelCase(path);
+  const componentClassName = vengerToCamelCase(path);
 
   return (isPure ? pureComponent : classComponent)(componentClassName);
 };

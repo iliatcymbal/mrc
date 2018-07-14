@@ -1,6 +1,6 @@
 {
   "name": "mrec",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "simply make react components with min deps",
   "main": "index.js",
   "dependencies": {
